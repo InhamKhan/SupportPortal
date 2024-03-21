@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 style="text-align: center">Support Portal</h2>
+    <form action="http://localhost:8080/reviewPortal.htm" onsubmit="return validateReview();" method="POST" >
+      <table>
+        <tr>
+          <th>Review The Support Portal Table</th>
+        </tr>
+    <tr><td><input type="hidden" name="doc_id" value="<%=portal._id %>"></td></tr>
+        <tr>
+          <td>Ticket_Id:</td>
+          <td><%=portal.ticket_id %></td>
+        </tr>
+        <tr>
+          <td>Tittle:</td>
+          <td><input type="text" name="tittle" id="tittle" value="<%=portal.tittle %>" />
+          <span id="tittleError" class="error"></span></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><input type="text" name="email" id="email" value="<%=portal.email %>"/>
+          <span id="emailError" class="error"></span></td>
+        </tr>
+        <tr>
+          <td>Ticket-Description</td>
+          <td>
+            <textarea
+              name="ticket_description"
+              id="ticket_description"
+              rows="5"
+              cols="20"
+              style="width: 224px; height: 97px"
+              value="<%=portal.ticket_description %>"
+            ></textarea>
+            <span id="ticketDescriptionError" class="error" ></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Date Opened</td>
+          <td>
+            <input
+              type="function function date() {
+                
+            }"
+              type="datetime-local"
+              name="date"
+              id="date"
+              value="<%=portal.open_date%>"
+              placeholder="HH:mm:ss"
+            /> 
+          </td>
+        </tr>
+        <tr>
+          <td>Assingned_To</td>
+          <td>
+            <select style="width: 30%" id="assign_to" name="assign_to" value="<%=portal.assign_to %>"
+             >
+              <option></option>
+              <option>Hammza Ali</option>
+              <option>Hammad</option>
+              <option>Hassan Ahmed</option>
+              <option>Haseeb Sarwar</option> 
+              <option>Hashim khan</option>
+              <option>Jazib Ahmed</option>
+              <option>Yasir Khan</option>
+              <option>Wajhat Khan</option>
+              <option>Fahad Khan</option>
+              <option>Jibran khan</option>
+              <option>Hasseeb Sarwar</option>
+            </select>
+            <span id="Assigned_ToError" class="error"></span>
+          </td>
+        </tr>
+        
+          <td>Priority:</td>
+          <td>
+            <select style="width: 30%" id="check_priority" name="check_priority" value="<%=portal.check_priority %>">
+              <option>1</option>
+              <option>Frist_Hall</option>
+              <option>Ground_Hall</option>
+              <option>Metro #290</option>
+              <option>Metro #291</option>
+              <option>Metro #292</option>
+              <option>Metro #293</option>
+              <option>Super Mart</option>
+              <option>Super Mall</option>
+              
+            </select>
+            <span id="priorityError" class="error"></span>
+          </td>
+        </tr>
+          <td>Status:</td>
+          <td>
+            <select style="width: 30%" id="check_status" name="check_status" value="<%=portal.check_status %>">
+              <option></option>
+              <option>1</option>
+              <option>2</option>                                       
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+<span id="statusError" class="error"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td> &nbsp;</td>
+        </tr>
+        <tr>
+          <td><input type="submit" name="review" id="review"   value= "   Review  " ></td>
+      </tr>
+
+      </table>
+    </form>
+    <script src="portal.js">
+    </script>
+  </body>
+</html>

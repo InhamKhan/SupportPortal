@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Support Portal</title>
+    <style>
+       .main-table{
+  border-collapse: collapse;
+  width: 100%;
+  overflow: auto;
+}
+
+th, td {
+  text-align: left;
+  padding: 6px;
+  margin: 0;
+}
+
+tr:nth-child(odd) {background-color: #f2f2f2;}
+</style>
+    
+    </head>
+    
+    <body>
+        <table class="main-tabel">
+            <tr>
+                <th>Ticket Id</th>
+                <th>Tittle</th>
+                <th>Email</th>
+                <th>Ticket-Description</th>
+                <td>Assingned_To</td>
+                <th>Priority</th>
+                <th>Status</th> 
+                <th>Open Date</th>   
+            </tr>
+                
+            </tr>
+            <% for(var a=0; a < data.length; a++){ %>
+            <tr>
+                <td><%= data[a].ticket_id%></td>
+                <td><%= data[a].tittle%></td>
+                <td><%= data[a].email%></td>
+                <td><%= data[a].ticket_description%></td>
+                <td><%= data[a].assign_to%></td>
+                <td><%= data[a].ticket_priority%></td>
+                <td><%= data[a].check_status%></td>
+                <td><%= data[a].open_date%></td>
+                <td><%= data[a].close_date%></td>
+
+                <td><a href="editPortal.htm?doc_id=<%= data[a]._id %>" >Review</a></td>
+                
+            </tr>
+       <% } %>
+        </table>
+    </body>
+</html>

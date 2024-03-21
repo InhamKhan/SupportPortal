@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://localhost:8080">
+
+    <title>Support Portal</title>
+  </head>
+  <body>
+    <h2 style="text-align: center">Support Portal</h2>
+    <form action="http://localhost:8080/addPortal.htm"  method="POST" onsubmit="return  validateportal()" >
+      <table class="main-table">
+        <tr>
+          <td>Ticket_ID:</td>
+          <td><input type="text" id="ticket_id" name="ticket_id" placeholder="auto-generated" />
+          <span id="ticketIdError" class="error"></span></td>
+        </tr>
+        <tr>
+          <td>Tittle:</td>
+          <td><input type="text" name="tittle" id="tittle" value="" />
+            <span id="tittleError" class="error"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><input type="text" name="email" id="email" />
+          <span id="emailError" class="error"></span>
+        </td>
+        </tr>
+        <tr>
+          <td>Ticket-Description</td>
+          <td>
+            <textarea
+              name="ticket_description"
+              id="ticket_description"
+              rows="5"
+              cols="20"
+              style="width: 224px; height: 97px"
+            ></textarea>
+            <span id="tickDesError" class="error"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Priority</td>
+          <td><input type="submit" name="check_priority" id="check_priority" value=" Open Ticket " />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script src="portal.js"></script>
+  </body>
+</html>
